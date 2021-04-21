@@ -39,12 +39,13 @@
         <a href="#" class="close" onclick="closeSlideMenu()">
             <i class="fas fa-times"></i>
         </a>
-        <a href="">Accueil</a>
+        <a href="?page=default">Accueil</a>
         <a href="">Réservation</a>
-        <a href="">Connexion</a>
+        <a href="?page=connexion">Connexion</a>
+        <a href="?page=inscription">S'inscrire</a>
         <a href="">Nous contacter</a>
     </div>
-    <h1>Responsive Animated Sidebar Menu</h1>
+    <h1>LocAFPA</h1>
     </div>    
 
 <script>
