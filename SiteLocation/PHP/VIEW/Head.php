@@ -3,7 +3,8 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Location</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <title>Document</title>
         <?php
         if (file_exists("./CSS/style.css"))
             {
@@ -20,3 +21,39 @@
     /* Autoload permet de charger toutes les classes necessaires */
     Parametre::init();
     DbConnect::init();
+    ?>
+
+    <body>
+<header>
+
+</header>
+<main>
+<div class="content">
+        <span class="slide">
+            <a href="#" onclick="openSlideMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </span>
+
+    <div id="menu" class="nav">
+        <a href="#" class="close" onclick="closeSlideMenu()">
+            <i class="fas fa-times"></i>
+        </a>
+        <a href="">Accueil</a>
+        <a href="">Réservation</a>
+        <a href="">Connexion</a>
+        <a href="">Nous contacter</a>
+    </div>
+    <h1>Responsive Animated Sidebar Menu</h1>
+    </div>    
+
+<script>
+    function openSlideMenu(){
+        document.getElementById('menu').style.width = '250px';
+        document.getElementById('content').style.marginLeft = '250px';
+    }
+    function closeSlideMenu(){
+        document.getElementById('menu').style.width = '0';
+        document.getElementById('content').style.marginLeft = '0';
+    }
+</script>
