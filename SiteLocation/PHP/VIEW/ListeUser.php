@@ -6,9 +6,9 @@
           echo '
                 <div class="username">Prenom:'.$u->getPrenomUser().'</div>
                 <div class="Utilisateur">
-                    <a href="?page=FormUser&mode=detail&id='.$u->getIdUser().'"><button class="btn">Detail</button></a>
-                    <a href="?page=FormUser&mode=modifier&id='.$u->getIdUser().'"><button class="btn">Modifier</button></a>
-                    <a href="?page=FormUser&mode=supprimer&id='.$u->getIdUser().'"><button class="btn">Supprimer</button></a>  
+                    <a href="?page=FormGestion&mode=detail&id='.$u->getIdUser().'"><button class="btn">Detail</button></a>
+                    <a href="?page=FormGestion&mode=modifier&id='.$u->getIdUser().'"><button class="btn">Modifier</button></a>
+                    <a href="?page=FormGestion&mode=supprimer&id='.$u->getIdUser().'"><button class="btn">Supprimer</button></a>  
                 </div> ';   
         }
     }else{
