@@ -1,8 +1,6 @@
-<h1>Connecté</h1>
-
 <?php
     if($_SESSION["utilisateur"]->getIdRole()==1){
-        echo "Session Administrateur";
+        header("location:index.php?page=PageAdmin");
     }else{
         echo "Session Utilisateur ";
     }

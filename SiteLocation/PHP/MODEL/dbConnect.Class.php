@@ -1,15 +1,25 @@
 <?php
-class DbConnect {
+
+class DbConnect
+{
     private static $db;
-    public static function getDb() {
+
+    public static function getDb()
+    {
         return DbConnect::$db;
     }
-    public static function init() {
+
+    public static function init()
+    {
         try {
-            self::$db= new PDO ( 'mysql:host=localhost;dbname=Location;charset=utf8', 'root', '');
-        } catch ( Exception $e ) {
-            die ( 'Erreur : ' . $e->getMessage () );
+            // On se connecte � MySQL
+           self::$db = new PDO('mysql:host=' . Parametre::getHost() . ';port=' . Parametre::getPort() . ';dbname=' . Parametre::getDbname() . ';charset=utf8', Parametre::getLogin(), Parametre::getPwd());
         }
-        
+        catch (Exception $e)
+        {
+            // En cas d'erreur, on affiche un message et on arr�te tout
+            die('Erreur : ' . $e->getMessage());
+        }
+
     }
 }

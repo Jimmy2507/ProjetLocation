@@ -3,7 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Location</title>
         <?php
         if (file_exists("./CSS/style.css"))
             {
@@ -18,5 +18,5 @@
     
     <?php
     /* Autoload permet de charger toutes les classes necessaires */
-    
+    Parametre::init();
     DbConnect::init();

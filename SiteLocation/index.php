@@ -33,8 +33,11 @@ $routes =[
     "inscription" => ["PHP/VIEW/", "FormInscription", "Identification"],
     "actionInscription" => ["PHP/VIEW/", "ActionInscription", "xx"],
     "connexion" => ["PHP/VIEW/", "FormConnexion", "Identification"],
+    "deconnexion"=>["PHP/VIEW/","ActionDeconnexion","xx"],
     "actionConnexion"=>["PHP/VIEW/","ActionConnexion","xx"],
-    "pageCo"=>["PHP/VIEW/","pageCo","xx"]
+    "pageCo"=>["PHP/VIEW/","pageCo","xx"],
+    "PageAdmin"=>["PHP/VIEW/","pageAdmin","Page Administrateur"],
+    "ListeUser"=>["PHP/VIEW/","listeUser","Liste des Utilisateur"],
 ];
 
 if (isset($_GET["page"]))

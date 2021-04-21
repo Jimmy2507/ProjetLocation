@@ -45,7 +45,7 @@ class UserManager{
     public static function getList(){
         $db = DbConnect::getDb();
         $liste = [];
-        $q = $db->query("SELECT * FROM User order by nomRole");
+        $q = $db->query("SELECT * FROM User ");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
             if ($donnees != false){
                 $liste[] = new User($donnees);
