@@ -41,13 +41,24 @@ class VoitureManager{
     public static function getList(){
         $db = DbConnect::getDb();
         $liste = [];
-        $q = $db->query("SELECT * FROM Voiture order by nomRole");
+        $q = $db->query("SELECT * FROM Voiture");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
             if ($donnees != false){
                 $liste[] = new Voiture($donnees);
             }
         }
         return $liste;  // tableau contenant les objets Roles
+    }
+    public static function getListModelByMarque($marque){
+        $db = DbConnect::getDb();
+        $liste = [];
+        $q = $db->query("SELECT distinct modelVoiture FROM Voiture where marqueVoiture='".$marque."'");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
+            if ($donnees != false){
+                $liste[] = new Voiture($donnees);
+            }
+        }
+        return $liste;  // tableau contenant les modele en fonction d une marque
     }
 
 }

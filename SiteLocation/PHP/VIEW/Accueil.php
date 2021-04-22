@@ -6,3 +6,6 @@
 <a href="?page=inscription">
 <button>S'inscrire</button>
 </a>
+<a href="?page=reservation">
+<button>reservation</button>
+</a>

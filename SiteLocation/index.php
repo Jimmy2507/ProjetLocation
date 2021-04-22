@@ -34,7 +34,11 @@ $routes =[
     "actionInscription" => ["PHP/VIEW/", "ActionInscription", "xx"],
     "connexion" => ["PHP/VIEW/", "FormConnexion", "Identification"],
     "actionConnexion"=>["PHP/VIEW/","ActionConnexion","xx"],
-    "pageCo"=>["PHP/VIEW/","pageCo","xx"]
+    "pageCo"=>["PHP/VIEW/","pageCo","xx"],
+    "reservation" => ["PHP/VIEW/", "FormReservation", "Identification"],
+    "actionReservation" => ["PHP/VIEW/", "ActionReservation", "xx"],
+    "actionReservModel" => ["PHP/VIEW/", "FormReservModel", "Identification"],
+    "actionReservation" => ["PHP/VIEW/", "ActionReservModel", "xx"],
 ];
 
 if (isset($_GET["page"]))

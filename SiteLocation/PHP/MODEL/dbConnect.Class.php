@@ -6,7 +6,7 @@ class DbConnect {
     }
     public static function init() {
         try {
-            self::$db= new PDO ( 'mysql:host=localhost;dbname=Location;charset=utf8', 'root', '');
+            self::$db= new PDO ('mysql:host=localhost;dbname=location;port=3307', 'root', '');
         } catch ( Exception $e ) {
             die ( 'Erreur : ' . $e->getMessage () );
         }
