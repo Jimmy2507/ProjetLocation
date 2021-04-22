@@ -1,4 +1,6 @@
 <?php
+    
+
     function afficherPage($page){
     $chemin= $page[0];
     $nom=$page[1];
@@ -33,15 +35,8 @@ $routes =[
     "inscription" => ["PHP/VIEW/", "FormInscription", "Identification"],
     "actionInscription" => ["PHP/VIEW/", "ActionInscription", "xx"],
     "connexion" => ["PHP/VIEW/", "FormConnexion", "Identification"],
-    "deconnexion"=>["PHP/VIEW/","ActionDeconnexion","xx"],
     "actionConnexion"=>["PHP/VIEW/","ActionConnexion","xx"],
-    "pageCo"=>["PHP/VIEW/","pageCo","xx"],
-    "PageAdmin"=>["PHP/VIEW/","pageAdmin","Page Administrateur"],
-    "ListeUser"=>["PHP/VIEW/","listeUser","Liste des Utilisateur"],
-    "FormGestion"=>["PHP/VIEW/","FormGestion","Formulaire Gestion Utilisateur"],
-    "ActionUser"=>["PHP/VIEW/","ActionUser","Action Gestionnaire Utilisateur"],
-    "FormAjoutVoiture"=>["PHP/VIEW/","FormAjoutVoiture","xx"],
-    "ActionAjoutVoiture"=>["PHP/VIEW/","ActionAjoutVoiture","xx"],
+    "pageCo"=>["PHP/VIEW/","pageCo","xx"]
 ];
 
 if (isset($_GET["page"]))

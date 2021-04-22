@@ -14,15 +14,14 @@ class UserManager{
     }
 
     public static function update(User $objet){
-	    $db = DbConnect::getDb();	$q = $db->prepare("UPDATE User SET prenomUser=:prenomUser,password=:password,nomUser=:nomUser,mailUser:mailUser,numTel=:numTel,idRole=:idRole WHERE idUser=:idUser");
-
+	    $db = DbConnect::getDb();	$q = $db->prepare("UPDATE User SET ** WHERE **");
+        $q->bindValue(":idUser",$objet->getIdUser());
         $q->bindValue(":prenomUser",$objet->getPrenomUser());
         $q->bindValue(":password",$objet->getPassword());
         $q->bindValue(":nomUser",$objet->getNomUser());
         $q->bindValue(":mailUser",$objet->getMailUser());
         $q->bindValue(":numTel",$objet->getNumTel());
-        $q->bindValue(":idRole",$objet->getIdRole());       
-        $q->bindValue(":idUser",$objet->getIdUser());
+        $q->bindValue(":idRole",$objet->getIdRole());
 	    $q->execute();
     }
 
@@ -46,7 +45,7 @@ class UserManager{
     public static function getList(){
         $db = DbConnect::getDb();
         $liste = [];
-        $q = $db->query("SELECT * FROM User ");
+        $q = $db->query("SELECT * FROM User order by nomRole");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
             if ($donnees != false){
                 $liste[] = new User($donnees);

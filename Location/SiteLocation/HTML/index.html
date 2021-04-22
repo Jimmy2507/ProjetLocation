@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <title>Menu Sidebar</title>
+</head>
+<body>
+    <div class="content">
+        <span class="slide">
+            <a href="#" onclick="openSlideMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </span>
+
+    <div id="menu" class="nav">
+        <a href="#" class="close" onclick="closeSlideMenu()">
+            <i class="fas fa-times"></i>
+        </a>
+        <a href="">Accueil</a>
+        <a href="">A propos</a>
+        <a href="">Services</a>
+        <a href="">Portfolio</a>
+        <a href="">Nous contacter</a>
+    </div>
+    <h1>Responsive Animated Sidebar Menu</h1>
+    </div>    
+</body>
+
+<script>
+    function openSlideMenu(){
+        document.getElementById('menu').style.width = '250px';
+        document.getElementById('content').style.marginLeft = '250px';
+    }
+    function closeSlideMenu(){
+        document.getElementById('menu').style.width = '0';
+        document.getElementById('content').style.marginLeft = '0';
+    }
+</script>
+
+</html>
